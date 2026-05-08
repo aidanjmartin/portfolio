@@ -1,25 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primary palette - Dark engineering/controls theme */
-  --color-forest: #2f4538;
-  --color-forest-light: #3d5847;
-  --color-walnut: #6b4d35;
-  --color-walnut-light: #a07d5c;
-  --color-slate: #4a5d6c;
-  --color-slate-light: #7a9eb5;
-  --color-cream: #e8e4dc;
+  /* Primary palette - Earthy tones tuned to pop on dark background */
+  --color-forest: #3a6b4a;
+  --color-forest-light: #5fa572;
+  --color-forest-glow: rgba(95, 165, 114, 0.35);
+  --color-walnut: #8a6440;
+  --color-walnut-light: #d4a574;
+  --color-walnut-glow: rgba(212, 165, 116, 0.30);
+  --color-slate: #5a7a8a;
+  --color-slate-light: #8fbed4;
+  --color-slate-glow: rgba(143, 190, 212, 0.30);
+  --color-brass: #d4af6e;
+  --color-cream: #f0ebe0;
   --color-cream-muted: #b8b4ac;
 
   /* Dark theme base */
-  --color-background: #0f1214;
-  --color-surface: #181c1f;
-  --color-surface-elevated: #1f2428;
-  --color-foreground: #e8e4dc;
-  --color-muted: #9ca3af;
+  --color-background: #0c0f11;
+  --color-surface: #161a1d;
+  --color-surface-elevated: #1d2226;
+  --color-foreground: #f0ebe0;
+  --color-muted: #a8aeb5;
   --color-muted-foreground: #6b7280;
-  --color-border: rgba(232, 228, 220, 0.08);
-  --color-border-strong: rgba(232, 228, 220, 0.15);
+  --color-border: rgba(212, 165, 116, 0.10);
+  --color-border-strong: rgba(212, 165, 116, 0.22);
 
   /* Accent colors */
   --color-accent: var(--color-forest-light);
@@ -30,7 +34,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Grid pattern */
-  --grid-color: rgba(232, 228, 220, 0.03);
+  --grid-color: rgba(212, 165, 116, 0.04);
   --grid-size: 40px;
 }
 
@@ -94,3 +98,100 @@ body {
   background: var(--color-forest);
   color: var(--color-cream);
 }
+
+/* ============ Hero animations ============ */
+
+/* Slow drift for floating equations */
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0); opacity: 0.20; }
+  50%      { transform: translate(8px, -14px); opacity: 0.42; }
+}
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0); opacity: 0.18; }
+  50%      { transform: translate(-12px, 10px); opacity: 0.38; }
+}
+@keyframes drift-c {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg); opacity: 0.22; }
+  50%      { transform: translate(6px, 8px) rotate(2deg); opacity: 0.45; }
+}
+@keyframes drift-d {
+  0%, 100% { transform: translate(0, 0); opacity: 0.20; }
+  50%      { transform: translate(-8px, -10px); opacity: 0.40; }
+}
+
+.eq-drift-a { animation: drift-a 14s ease-in-out infinite; }
+.eq-drift-b { animation: drift-b 18s ease-in-out infinite; }
+.eq-drift-c { animation: drift-c 22s ease-in-out infinite; }
+.eq-drift-d { animation: drift-d 16s ease-in-out infinite; }
+
+/* Robot arm joint rotations */
+@keyframes joint-1 {
+  0%, 100% { transform: rotate(-22deg); }
+  50%      { transform: rotate(28deg); }
+}
+@keyframes joint-2 {
+  0%, 100% { transform: rotate(40deg); }
+  50%      { transform: rotate(-30deg); }
+}
+@keyframes joint-3 {
+  0%, 100% { transform: rotate(-15deg); }
+  50%      { transform: rotate(35deg); }
+}
+
+.kine-j1 { animation: joint-1 9s ease-in-out infinite; transform-origin: var(--ox) var(--oy); transform-box: fill-box; }
+.kine-j2 { animation: joint-2 7s ease-in-out infinite; transform-origin: var(--ox) var(--oy); transform-box: fill-box; }
+.kine-j3 { animation: joint-3 6s ease-in-out infinite; transform-origin: var(--ox) var(--oy); transform-box: fill-box; }
+
+/* Animated plot trace */
+@keyframes plot-draw {
+  0%   { stroke-dashoffset: 600; }
+  60%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes plot-fade {
+  0%, 60% { opacity: 1; }
+  90%     { opacity: 0; }
+  100%    { opacity: 0; }
+}
+.plot-trace {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: plot-draw 6s ease-in-out infinite, plot-fade 6s ease-in-out infinite;
+}
+
+/* Pulsing data point */
+@keyframes pulse-dot {
+  0%, 100% { r: 2; opacity: 0.6; }
+  50%      { r: 4; opacity: 1; }
+}
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+/* Slow rotate for big background symbol */
+@keyframes slow-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.slow-rotate { animation: slow-rotate 60s linear infinite; }
+
+/* Pop hover */
+@keyframes pop-shadow {
+  from { box-shadow: 0 0 0 0 var(--color-forest-glow); }
+  to   { box-shadow: 0 0 20px 0 var(--color-forest-glow); }
+}
+
+/* ============ Modal ============ */
+
+@keyframes modal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes modal-pop {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-backdrop { animation: modal-fade 0.18s ease-out; }
+.modal-card { animation: modal-pop 0.22s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+/* hide scrollbars on the thumb strips for a cleaner pop */
+.thin-scroll::-webkit-scrollbar { height: 6px; }
+.thin-scroll::-webkit-scrollbar-thumb { background: var(--color-border-strong); border-radius: 3px; }

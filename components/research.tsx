@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Section } from "./section";
+import { ProjectModal, type ProjectModalData } from "./project-modal";
 
 interface MediaItem {
   type: "img" | "video";
@@ -147,75 +147,45 @@ const projects: Project[] = [
   },
 ];
 
-function ProjectCard({ project }: { project: Project }) {
-  const [activeMedia, setActiveMedia] = useState(0);
-  const currentMedia = project.media[activeMedia];
+function ProjectCard({ project, onOpen }: { project: Project; onOpen: () => void }) {
+  const cover = project.media[0];
 
   return (
-    <Link
-      href={project.href}
-      target="_blank"
-      rel="noopener"
-      className="group flex flex-col border border-border bg-surface no-underline transition-all hover:-translate-y-1 hover:border-forest-light"
+    <button
+      onClick={onOpen}
+      className="group flex flex-col border border-border bg-surface text-left no-underline transition-all hover:-translate-y-1 hover:border-forest-light hover:shadow-[0_8px_30px_-10px_var(--color-forest-glow)]"
     >
-      {/* Media */}
+      {/* Cover media */}
       <div className="relative aspect-video overflow-hidden border-b border-border bg-surface">
-        {currentMedia.type === "video" ? (
+        {cover.type === "video" ? (
           <iframe
-            src={currentMedia.src}
+            src={cover.src}
             title={project.title}
             loading="lazy"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="h-full w-full"
+            className="pointer-events-none h-full w-full"
           />
         ) : (
           <Image
-            src={currentMedia.src}
-            alt={currentMedia.alt || project.title}
+            src={cover.src}
+            alt={cover.alt || project.title}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         )}
+        {project.media.length > 1 && (
+          <span className="absolute right-2 top-2 border border-border-strong bg-background/80 px-1.5 py-0.5 font-mono text-[0.6rem] tracking-wide text-walnut-light backdrop-blur-sm">
+            +{project.media.length - 1}
+          </span>
+        )}
+        <span className="absolute bottom-2 right-2 border border-forest-light/40 bg-background/70 px-1.5 py-0.5 font-mono text-[0.6rem] uppercase tracking-wider text-forest-light opacity-0 transition-opacity group-hover:opacity-100">
+          ⤢ Open
+        </span>
       </div>
 
-      {/* Gallery thumbnails */}
-      {project.media.length > 1 && (
-        <div className="flex gap-1 overflow-x-auto border-b border-border bg-background px-3 py-2">
-          {project.media.map((item, idx) => (
-            <button
-              key={idx}
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveMedia(idx);
-              }}
-              className={`aspect-video h-8 flex-shrink-0 overflow-hidden border transition-colors ${
-                idx === activeMedia
-                  ? "border-forest-light"
-                  : "border-border hover:border-forest-light"
-              }`}
-            >
-              {item.type === "video" ? (
-                <span className="flex h-full w-full items-center justify-center bg-surface font-mono text-[0.5rem] text-forest-light">
-                  Video
-                </span>
-              ) : (
-                <Image
-                  src={item.src}
-                  alt=""
-                  width={56}
-                  height={35}
-                  className="h-full w-full object-cover"
-                />
-              )}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Body */}
       <div className="flex flex-1 flex-col p-4">
         <span className="mb-1.5 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-walnut-light">
           {project.tag}
@@ -230,30 +200,46 @@ function ProjectCard({ project }: { project: Project }) {
           {project.chips.map((chip) => (
             <span
               key={chip}
-              className="border border-border-strong px-2 py-0.5 font-mono text-[0.6rem] tracking-[0.02em] text-muted"
+              className="border border-border-strong px-2 py-0.5 font-mono text-[0.6rem] tracking-[0.02em] text-cream-muted"
             >
               {chip}
             </span>
           ))}
         </div>
       </div>
-    </Link>
+    </button>
   );
 }
 
 export function Research() {
+  const [open, setOpen] = useState<ProjectModalData | null>(null);
+
   return (
     <Section
       id="research"
       label="06"
       title="Research & Major Projects"
-      description="Original research, autonomous robotics, and full-stack engineering builds."
+      description="Original research, autonomous robotics, and full-stack engineering builds. Click any project to view full details."
     >
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            onOpen={() =>
+              setOpen({
+                href: project.href,
+                tag: project.tag,
+                title: project.title,
+                description: project.description,
+                chips: project.chips,
+                media: project.media,
+              })
+            }
+          />
         ))}
       </div>
+      <ProjectModal project={open} onClose={() => setOpen(null)} />
     </Section>
   );
 }

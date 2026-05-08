@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary palette - Earthy brutalist academic */
+  --color-forest: #2f4538;
+  --color-forest-light: #3d5847;
+  --color-walnut: #6b4d35;
+  --color-walnut-light: #8a6a4d;
+  --color-slate: #4a5d6c;
+  --color-slate-light: #627a8b;
+  --color-parchment: #f4ede0;
+  --color-parchment-dark: #e8dfd0;
+  --color-ink: #1a1a1a;
+
+  /* Functional colors */
+  --color-background: var(--color-parchment);
+  --color-foreground: var(--color-ink);
+  --color-muted: #4a4a4a;
+  --color-muted-foreground: #6b6b6b;
+  --color-border: rgba(26, 26, 26, 0.12);
+  --color-border-strong: rgba(26, 26, 26, 0.25);
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Grid pattern */
+  --grid-color: rgba(26, 26, 26, 0.04);
+  --grid-size: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-mono);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Graph paper background */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Step response animation */
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.step-response {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-line 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Scroll pulse animation */
+@keyframes scroll-pulse {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(300%);
+  }
+}
+
+.scroll-line {
+  animation: scroll-pulse 2s ease-in-out infinite;
+}

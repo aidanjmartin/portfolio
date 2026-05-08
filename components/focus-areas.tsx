@@ -26,16 +26,16 @@ const focusAreas = [
 export function FocusAreas() {
   return (
     <Section id="focus" label="02" title="Focus Areas">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {focusAreas.map((area) => (
           <article
             key={area.title}
-            className="border border-border bg-parchment-dark p-6 transition-all hover:-translate-y-0.5 hover:border-forest"
+            className="border border-border bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-forest-light"
           >
-            <h3 className="mb-3 font-serif text-[1.1rem] font-semibold text-ink">
+            <h3 className="mb-2 font-sans text-[1rem] font-semibold text-cream">
               {area.title}
             </h3>
-            <p className="m-0 text-[0.85rem] leading-relaxed text-muted">
+            <p className="m-0 text-[0.8rem] leading-relaxed text-muted">
               {area.description}
             </p>
           </article>

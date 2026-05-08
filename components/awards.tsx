@@ -46,15 +46,15 @@ export function Awards() {
         {awards.map((award) => (
           <article
             key={award.title}
-            className="border border-border bg-parchment-dark p-6 transition-colors hover:border-walnut"
+            className="border border-border bg-surface p-5 transition-colors hover:border-walnut-light"
           >
-            <h3 className="mb-1 font-serif text-[1.05rem] font-semibold text-ink">
+            <h3 className="mb-1 font-sans text-[0.95rem] font-semibold text-cream">
               {award.title}
             </h3>
-            <p className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.08em] text-walnut">
+            <p className="mb-2 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-walnut-light">
               {award.org}
             </p>
-            <p className="m-0 text-[0.85rem] leading-relaxed text-muted">
+            <p className="m-0 text-[0.8rem] leading-relaxed text-muted">
               {award.description}
             </p>
             {award.link && (
@@ -62,7 +62,7 @@ export function Awards() {
                 href={award.link}
                 target="_blank"
                 rel="noopener"
-                className="mt-3 inline-block border-b border-transparent text-[0.8rem] text-forest no-underline transition-colors hover:border-forest"
+                className="mt-3 inline-block text-[0.75rem] text-forest-light no-underline transition-colors hover:text-cream"
               >
                 View certificate (PDF)
               </Link>

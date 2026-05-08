@@ -156,10 +156,10 @@ function ProjectCard({ project }: { project: Project }) {
       href={project.href}
       target="_blank"
       rel="noopener"
-      className="group flex flex-col border border-border bg-parchment-dark no-underline transition-all hover:-translate-y-1 hover:border-forest"
+      className="group flex flex-col border border-border bg-surface no-underline transition-all hover:-translate-y-1 hover:border-forest-light"
     >
       {/* Media */}
-      <div className="relative aspect-video overflow-hidden border-b border-border bg-parchment-dark">
+      <div className="relative aspect-video overflow-hidden border-b border-border bg-surface">
         {currentMedia.type === "video" ? (
           <iframe
             src={currentMedia.src}
@@ -183,7 +183,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Gallery thumbnails */}
       {project.media.length > 1 && (
-        <div className="flex gap-1 overflow-x-auto border-b border-border bg-parchment px-3 py-2">
+        <div className="flex gap-1 overflow-x-auto border-b border-border bg-background px-3 py-2">
           {project.media.map((item, idx) => (
             <button
               key={idx}
@@ -191,14 +191,14 @@ function ProjectCard({ project }: { project: Project }) {
                 e.preventDefault();
                 setActiveMedia(idx);
               }}
-              className={`aspect-video h-9 flex-shrink-0 overflow-hidden border transition-colors ${
+              className={`aspect-video h-8 flex-shrink-0 overflow-hidden border transition-colors ${
                 idx === activeMedia
-                  ? "border-forest"
-                  : "border-border hover:border-forest"
+                  ? "border-forest-light"
+                  : "border-border hover:border-forest-light"
               }`}
             >
               {item.type === "video" ? (
-                <span className="flex h-full w-full items-center justify-center bg-parchment-dark font-mono text-[0.55rem] text-forest">
+                <span className="flex h-full w-full items-center justify-center bg-surface font-mono text-[0.5rem] text-forest-light">
                   Video
                 </span>
               ) : (
@@ -216,21 +216,21 @@ function ProjectCard({ project }: { project: Project }) {
       )}
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-5">
-        <span className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.08em] text-walnut">
+      <div className="flex flex-1 flex-col p-4">
+        <span className="mb-1.5 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-walnut-light">
           {project.tag}
         </span>
-        <h3 className="mb-2 font-serif text-[1.15rem] font-semibold text-ink">
+        <h3 className="mb-2 font-sans text-[1rem] font-semibold text-cream">
           {project.title}
         </h3>
-        <p className="mb-4 flex-1 text-[0.85rem] leading-relaxed text-muted">
+        <p className="mb-3 flex-1 text-[0.8rem] leading-relaxed text-muted">
           {project.description}
         </p>
         <div className="mt-auto flex flex-wrap gap-1.5">
           {project.chips.map((chip) => (
             <span
               key={chip}
-              className="border border-border-strong px-2 py-1 font-mono text-[0.65rem] tracking-[0.02em] text-muted"
+              className="border border-border-strong px-2 py-0.5 font-mono text-[0.6rem] tracking-[0.02em] text-muted"
             >
               {chip}
             </span>
@@ -249,7 +249,7 @@ export function Research() {
       title="Research & Major Projects"
       description="Original research, autonomous robotics, and full-stack engineering builds."
     >
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}

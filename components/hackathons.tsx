@@ -78,11 +78,11 @@ export function Hackathons() {
             href={project.href}
             target="_blank"
             rel="noopener"
-            className="group flex flex-col border border-border bg-parchment-dark p-5 no-underline transition-all hover:-translate-y-0.5 hover:border-walnut"
+            className="group flex flex-col border border-border bg-surface p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-walnut-light"
           >
             {/* Media */}
             {project.media && (
-              <div className="-mx-5 -mt-5 mb-4 aspect-video overflow-hidden border-b border-border bg-parchment-dark">
+              <div className="-mx-4 -mt-4 mb-4 aspect-video overflow-hidden border-b border-border bg-surface">
                 {project.media.type === "video" ? (
                   <iframe
                     src={project.media.src}
@@ -105,13 +105,13 @@ export function Hackathons() {
               </div>
             )}
 
-            <span className="mb-1.5 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-walnut">
+            <span className="mb-1 font-mono text-[0.6rem] uppercase tracking-[0.08em] text-walnut-light">
               {project.tag}
             </span>
-            <h3 className="mb-1.5 font-serif text-[1rem] font-semibold text-ink">
+            <h3 className="mb-1.5 font-sans text-[0.95rem] font-semibold text-cream">
               {project.title}
             </h3>
-            <p className="m-0 flex-1 text-[0.85rem] leading-relaxed text-muted">
+            <p className="m-0 flex-1 text-[0.8rem] leading-relaxed text-muted">
               {project.description}
             </p>
           </Link>

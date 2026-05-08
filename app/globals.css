@@ -1,31 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primary palette - Earthy brutalist academic */
+  /* Primary palette - Dark engineering/controls theme */
   --color-forest: #2f4538;
   --color-forest-light: #3d5847;
   --color-walnut: #6b4d35;
-  --color-walnut-light: #8a6a4d;
+  --color-walnut-light: #a07d5c;
   --color-slate: #4a5d6c;
-  --color-slate-light: #627a8b;
-  --color-parchment: #f4ede0;
-  --color-parchment-dark: #e8dfd0;
-  --color-ink: #1a1a1a;
+  --color-slate-light: #7a9eb5;
+  --color-cream: #e8e4dc;
+  --color-cream-muted: #b8b4ac;
 
-  /* Functional colors */
-  --color-background: var(--color-parchment);
-  --color-foreground: var(--color-ink);
-  --color-muted: #4a4a4a;
-  --color-muted-foreground: #6b6b6b;
-  --color-border: rgba(26, 26, 26, 0.12);
-  --color-border-strong: rgba(26, 26, 26, 0.25);
+  /* Dark theme base */
+  --color-background: #0f1214;
+  --color-surface: #181c1f;
+  --color-surface-elevated: #1f2428;
+  --color-foreground: #e8e4dc;
+  --color-muted: #9ca3af;
+  --color-muted-foreground: #6b7280;
+  --color-border: rgba(232, 228, 220, 0.08);
+  --color-border-strong: rgba(232, 228, 220, 0.15);
+
+  /* Accent colors */
+  --color-accent: var(--color-forest-light);
+  --color-accent-warm: var(--color-walnut-light);
 
   /* Typography */
-  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Grid pattern */
-  --grid-color: rgba(26, 26, 26, 0.04);
+  --grid-color: rgba(232, 228, 220, 0.03);
   --grid-size: 40px;
 }
 
@@ -82,4 +87,10 @@ body {
 
 .scroll-line {
   animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-forest);
+  color: var(--color-cream);
 }

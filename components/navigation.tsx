@@ -47,14 +47,14 @@ export function Navigation() {
 
   return (
     <nav
-      className={`sticky top-0 z-[100] flex items-center justify-between gap-8 border-b border-border bg-parchment px-8 py-4 ${
+      className={`sticky top-0 z-[100] flex items-center justify-between gap-8 border-b border-border bg-background/95 px-8 py-4 backdrop-blur-sm ${
         isOpen ? "flex-wrap" : ""
       }`}
       id="nav"
     >
       <Link
         href="#top"
-        className="font-serif text-xl font-semibold tracking-[0.05em] text-forest no-underline"
+        className="font-sans text-lg font-semibold tracking-tight text-cream no-underline"
       >
         AJM
       </Link>
@@ -62,14 +62,14 @@ export function Navigation() {
       {/* Desktop nav links */}
       <ul
         className={`m-0 hidden list-none gap-8 p-0 md:flex ${
-          isOpen ? "!flex flex-col absolute top-full left-0 right-0 bg-parchment border-b border-border px-8 py-6 gap-4" : ""
+          isOpen ? "!flex flex-col absolute top-full left-0 right-0 bg-background border-b border-border px-8 py-6 gap-4" : ""
         }`}
       >
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className="font-mono text-[0.8rem] tracking-[0.02em] text-muted no-underline transition-colors hover:text-forest"
+              className="font-mono text-[0.75rem] tracking-[0.02em] text-muted no-underline transition-colors hover:text-cream"
               onClick={() => setIsOpen(false)}
             >
               {link.label}
@@ -87,7 +87,7 @@ export function Navigation() {
             target="_blank"
             rel="noopener"
             aria-label={link.label}
-            className="text-muted no-underline transition-colors hover:text-forest"
+            className="text-muted no-underline transition-colors hover:text-forest-light"
           >
             {link.icon}
           </Link>
@@ -96,7 +96,7 @@ export function Navigation() {
           href="/images/aidan-martin-resume.pdf"
           target="_blank"
           rel="noopener"
-          className="border border-forest px-4 py-2 font-mono text-[0.75rem] uppercase tracking-[0.05em] text-forest no-underline transition-all hover:bg-forest hover:text-parchment"
+          className="border border-forest-light px-4 py-2 font-mono text-[0.7rem] uppercase tracking-[0.05em] text-forest-light no-underline transition-all hover:bg-forest-light hover:text-background"
         >
           Resume
         </Link>
@@ -110,12 +110,12 @@ export function Navigation() {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span
-          className={`h-px w-5 bg-ink transition-all ${
+          className={`h-px w-5 bg-cream transition-all ${
             isOpen ? "translate-y-[6px] rotate-45" : ""
           }`}
         />
         <span
-          className={`h-px w-5 bg-ink transition-all ${
+          className={`h-px w-5 bg-cream transition-all ${
             isOpen ? "-translate-y-[0px] -rotate-45" : ""
           }`}
         />
@@ -129,7 +129,7 @@ export function Navigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-mono text-[0.85rem] tracking-[0.02em] text-muted no-underline transition-colors hover:text-forest"
+                  className="font-mono text-[0.85rem] tracking-[0.02em] text-muted no-underline transition-colors hover:text-cream"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -145,7 +145,7 @@ export function Navigation() {
                 target="_blank"
                 rel="noopener"
                 aria-label={link.label}
-                className="text-muted no-underline transition-colors hover:text-forest"
+                className="text-muted no-underline transition-colors hover:text-forest-light"
               >
                 {link.icon}
               </Link>
@@ -154,7 +154,7 @@ export function Navigation() {
               href="/images/aidan-martin-resume.pdf"
               target="_blank"
               rel="noopener"
-              className="ml-auto border border-forest px-4 py-2 font-mono text-[0.75rem] uppercase tracking-[0.05em] text-forest no-underline transition-all hover:bg-forest hover:text-parchment"
+              className="ml-auto border border-forest-light px-4 py-2 font-mono text-[0.7rem] uppercase tracking-[0.05em] text-forest-light no-underline transition-all hover:bg-forest-light hover:text-background"
             >
               Resume
             </Link>

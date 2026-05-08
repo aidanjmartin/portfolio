@@ -52,30 +52,30 @@ export function Experience() {
           <li
             key={`${exp.org}-${exp.role}`}
             className={`relative pl-10 ${
-              index !== experiences.length - 1 ? "pb-8" : ""
+              index !== experiences.length - 1 ? "pb-6" : ""
             }`}
           >
             {/* Timeline marker */}
-            <div className="absolute left-0 top-1.5 h-[15px] w-[15px] border border-forest bg-parchment" />
+            <div className="absolute left-0 top-1.5 h-[15px] w-[15px] border border-forest-light bg-background" />
 
-            <div className="border border-border bg-parchment-dark px-6 py-5">
+            <div className="border border-border bg-surface px-5 py-4">
               <div className="mb-2 flex flex-wrap items-center gap-4">
-                <span className="font-mono text-[0.75rem] tracking-[0.03em] text-forest">
+                <span className="font-mono text-[0.7rem] tracking-[0.03em] text-forest-light">
                   {exp.date}
                 </span>
-                <span className="font-mono text-[0.75rem] text-muted-foreground">
+                <span className="font-mono text-[0.7rem] text-muted-foreground">
                   {exp.org}
                 </span>
               </div>
-              <h3 className="mb-1 font-serif text-[1.15rem] font-semibold text-ink">
+              <h3 className="mb-1 font-sans text-[1.05rem] font-semibold text-cream">
                 {exp.role}
               </h3>
               {exp.advisor && (
-                <p className="mb-3 text-[0.8rem] italic text-muted-foreground">
+                <p className="mb-2 text-[0.75rem] italic text-muted-foreground">
                   Advisor: {exp.advisor}
                 </p>
               )}
-              <p className="m-0 text-[0.9rem] leading-relaxed text-muted">
+              <p className="m-0 text-[0.85rem] leading-relaxed text-muted">
                 {exp.description}
               </p>
             </div>

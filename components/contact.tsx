@@ -19,6 +19,18 @@ const contactLinks = [
     href: "/images/aidan-martin-resume.pdf",
     label: "Resume",
   },
+  {
+    href: "mailto:ajm2dp@mtmail.mtsu.edu",
+    label: "MTSU Email",
+  },
+  {
+    href: "mailto:aidan.martin@vanderbilt.edu",
+    label: "Vanderbilt Email",
+  },
+  {
+    href: "tel:+16158562864",
+    label: "+1 (615) 856-2864",
+  },
 ];
 
 export function Contact() {

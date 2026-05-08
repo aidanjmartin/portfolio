@@ -3,134 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aidan J Martin — Mechatronics Engineer & Robotics Researcher</title>
-  <meta name="description" content="Mechatronics engineer and robotics researcher working on surgical robotics, autonomous systems, and machine learning at Vanderbilt MAPLE Lab and MTSU." />
+  <title>Aidan J Martin — Mechatronics Engineering Student / Research Assistant</title>
+  <meta name="description" content="Mechatronics Engineering student at MTSU and Research Assistant at Vanderbilt MAPLE Lab. Focus areas: surgical robotics, advanced control, computer vision, and machine learning." />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Aidan J Martin — Mechatronics Engineer & Robotics Researcher" />
-  <meta property="og:description" content="Surgical robotics @ Vanderbilt MAPLE Lab, autonomous systems, computer vision, and advanced control. Mechatronics + CS at MTSU." />
+  <meta property="og:title" content="Aidan J Martin — Mechatronics Engineering Student / Research Assistant" />
+  <meta property="og:description" content="Research Assistant at Vanderbilt MAPLE Lab. Surgical robotics, autonomous systems, computer vision, and advanced control." />
   <meta property="og:image" content="images/headshot.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Aidan J Martin — Mechatronics & Robotics" />
-  <meta name="twitter:description" content="Surgical robotics @ Vanderbilt MAPLE Lab, autonomous systems, and advanced control." />
+  <meta name="twitter:title" content="Aidan J Martin" />
+  <meta name="twitter:description" content="Mechatronics Engineering Student / Research Assistant" />
   <meta name="twitter:image" content="images/headshot.png" />
 
-  <!-- Favicon — inline SVG with AJM brand -->
-  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%2307090f"/><text x="16" y="23" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" font-weight="700" fill="%2300d4ff">A</text></svg>' />
+  <!-- Favicon — inline SVG with A in brand green -->
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="%232f4538"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="18" font-weight="700" fill="%23f4ede0">A</text></svg>' />
   <link rel="apple-touch-icon" href="images/headshot.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- background grid -->
+  <!-- Subtle graph paper grid background -->
   <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
 
-  <!-- nav -->
-  <nav class="nav">
-    <a href="#top" class="nav-brand">
-      <span class="brand-bracket">[</span>AJM<span class="brand-bracket">]</span>
+  <!-- HERO — Full viewport, thesis cover page style -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <!-- Engineering annotations -->
+      <div class="hero-annotation hero-annotation-tl" aria-hidden="true">
+        <span class="annotation-line"></span>
+        <span class="annotation-text">REV 2026.05</span>
+      </div>
+      <div class="hero-annotation hero-annotation-tr" aria-hidden="true">
+        <span class="annotation-text">SCALE 1:1</span>
+        <span class="annotation-line"></span>
+      </div>
+
+      <!-- Main hero content -->
+      <div class="hero-content">
+        <h1 class="hero-name">AIDAN J MARTIN</h1>
+        <p class="hero-tagline">Mechatronics Engineering Student / Research Assistant</p>
+        
+        <!-- Subtle SVG element — step response curve -->
+        <svg class="hero-svg" viewBox="0 0 200 60" fill="none" aria-hidden="true">
+          <path class="step-response" d="M0 50 H30 C35 50 35 10 40 10 H200" stroke="currentColor" stroke-width="1" fill="none"/>
+          <line x1="30" y1="50" x2="30" y2="55" stroke="currentColor" stroke-width="0.5"/>
+          <text x="30" y="59" class="svg-label">t₀</text>
+          <line x1="40" y1="10" x2="40" y2="5" stroke="currentColor" stroke-width="0.5"/>
+          <text x="40" y="4" class="svg-label">y∞</text>
+        </svg>
+      </div>
+
+      <!-- Crosshairs decoration -->
+      <div class="crosshair crosshair-bl" aria-hidden="true">
+        <span class="crosshair-h"></span>
+        <span class="crosshair-v"></span>
+      </div>
+      <div class="crosshair crosshair-br" aria-hidden="true">
+        <span class="crosshair-h"></span>
+        <span class="crosshair-v"></span>
+      </div>
+
+      <!-- Bottom annotation -->
+      <div class="hero-bottom" aria-hidden="true">
+        <span class="dimension-mark">|&lt;——— 2024–2027 ———&gt;|</span>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to content">
+      <span class="scroll-line"></span>
     </a>
+  </section>
+
+  <!-- Sticky nav — appears after hero -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav-brand">AJM</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#education">Credentials</a></li>
+      <li><a href="#credentials">Credentials</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Contact</a>
+    <div class="nav-social">
+      <a href="https://github.com/aidanjmartin" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.35.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/aidanjmartin/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@ajmartin_robot" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+      </a>
+      <a href="images/aidan-martin-resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">
-          <span class="status-dot"></span>
-          Research Assistant · Vanderbilt MAPLE Lab
-        </p>
-        <h1 class="hero-name">
-          Aidan&nbsp;J&nbsp;Martin
-        </h1>
-        <h2 class="hero-title">
-          <span class="accent-blue">Mechatronics Engineer</span>
-          <span class="amp">&</span>
-          <span class="accent-orange">Robotics Researcher</span>
-        </h2>
-        <p class="hero-bio">
-          Bridging the gap between physical hardware and advanced machine learning.
-          My work spans surgical robotics research at the
-          <span class="mono">Vanderbilt MAPLE Lab</span>, autonomous competitive robotics,
-          and rapid software development through hackathons. I specialize in
-          <span class="chip">Python</span>
-          <span class="chip">C++</span>
-          <span class="chip">ROS2</span>
-          and integrating AI pipelines with kinematic control systems.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://github.com/aidanjmartin" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.25 3.35.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
-            github.com/aidanjmartin
-          </a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/aidanjmartin/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-            LinkedIn
-          </a>
-          <a class="btn btn-ghost" href="https://www.youtube.com/@ajmartin_robot" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-            YouTube
-          </a>
-          <a class="btn btn-secondary" href="images/aidan-martin-resume.pdf" target="_blank" rel="noopener" download>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Resume
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num">4.00</span><span class="stat-label">GPA · MTSU</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">2026</span><span class="stat-label">VISE Summer Fellow</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">3yr</span><span class="stat-label">Accelerated B.S.</span></div>
-        </div>
-      </div>
-    </section>
-
+  <main>
     <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="section-head">
-        <span class="section-num">01</span>
+      <header class="section-header">
+        <span class="section-label">01</span>
         <h2 class="section-title">About</h2>
         <div class="section-line"></div>
-      </div>
-      <div class="about-wrap">
+      </header>
+
+      <div class="about-grid">
         <div class="about-photo">
           <img src="images/headshot.png" alt="Aidan J Martin" loading="lazy" />
-          <div class="about-photo-frame" aria-hidden="true"></div>
+          <div class="photo-frame" aria-hidden="true">
+            <span class="frame-corner frame-tl"></span>
+            <span class="frame-corner frame-tr"></span>
+            <span class="frame-corner frame-bl"></span>
+            <span class="frame-corner frame-br"></span>
+            <span class="frame-dimension">240 x 240</span>
+          </div>
         </div>
         <div class="about-text">
           <p>
             I am a Mechatronics Engineering student at Middle Tennessee State University,
-            completing my Bachelor's degree with minors in Computer Science and Mathematics.
+            completing my Bachelor&apos;s degree with minors in Computer Science and Mathematics.
             Alongside my undergraduate studies, my graduate-level coursework focuses on
             <strong>advanced control, reinforcement learning, robotics, and AI</strong>.
           </p>
           <p>
-            Concurrently, I am a robotics researcher at Vanderbilt University's
+            Concurrently, I am a robotics researcher at Vanderbilt University&apos;s
             <strong>Machine Automation, Perception, and Learning (MAPLE) Lab</strong>,
             where my work centers on surgical robotics and machine learning.
           </p>
           <p>
             My technical passions are rooted in complex algorithmic design — I am actively
             interested in pursuing work in
-            <span class="hl-blue">optimal and robust control</span>,
-            <span class="hl-blue">novel learning methods for control</span>,
-            <span class="hl-blue">optimization</span>,
-            <span class="hl-blue">computer vision</span>, and
-            <span class="hl-orange">financial mathematics and engineering</span>.
+            <span class="hl-green">optimal and robust control</span>,
+            <span class="hl-green">novel learning methods for control</span>,
+            <span class="hl-green">optimization</span>,
+            <span class="hl-green">computer vision</span>, and
+            <span class="hl-brown">financial mathematics and engineering</span>.
           </p>
           <p>
             I look forward to further expanding on these areas this summer during the
@@ -143,221 +160,224 @@
 
     <!-- FOCUS AREAS -->
     <section id="focus" class="section">
-      <div class="section-head">
-        <span class="section-num">02</span>
+      <header class="section-header">
+        <span class="section-label">02</span>
         <h2 class="section-title">Focus Areas</h2>
         <div class="section-line"></div>
-      </div>
+      </header>
+
       <div class="focus-grid">
-        <div class="focus-card glass">
-          <div class="focus-icon">⌬</div>
+        <article class="focus-card">
           <h3>Advanced &amp; Novel Control</h3>
           <p>Optimal control, robust control, and learning-based methods applied to robotic and surgical systems.</p>
-        </div>
-        <div class="focus-card glass">
-          <div class="focus-icon">◈</div>
+        </article>
+        <article class="focus-card">
           <h3>Computer Vision</h3>
           <p>Perception for robotics — surgical skill assessment, kinematic tracking, and 3D reconstruction from endoscopic video.</p>
-        </div>
-        <div class="focus-card glass">
-          <div class="focus-icon">◊</div>
+        </article>
+        <article class="focus-card">
           <h3>Optimization</h3>
           <p>Numerical optimization and convex methods grounding control synthesis, parameter estimation, and learning pipelines.</p>
-        </div>
-        <div class="focus-card glass">
-          <div class="focus-icon">⌗</div>
+        </article>
+        <article class="focus-card">
           <h3>Financial Engineering</h3>
           <p>Quantitative finance and financial mathematics — stochastic modeling, optimization, and applied probability.</p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-      <div class="section-head">
-        <span class="section-num">03</span>
-        <h2 class="section-title">Education</h2>
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="section">
+      <header class="section-header">
+        <span class="section-label">03</span>
+        <h2 class="section-title">Credentials</h2>
         <div class="section-line"></div>
+      </header>
+
+      <!-- Education -->
+      <div class="credentials-block">
+        <h3 class="credentials-subhead">Education</h3>
+        <div class="edu-card">
+          <div class="edu-header">
+            <div>
+              <h4 class="edu-school">Middle Tennessee State University</h4>
+              <p class="edu-degree">B.S. Mechatronics Engineering</p>
+              <p class="edu-minors">Minors in Computer Science &amp; Mathematics</p>
+            </div>
+            <div class="edu-meta">
+              <span class="badge">2024 – 2027</span>
+              <span class="badge badge-accent">GPA 4.00</span>
+              <span class="badge">3-Year Accelerated</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="edu-card glass">
-        <div class="edu-header">
-          <div>
-            <h3 class="edu-school">Middle Tennessee State University</h3>
-            <p class="edu-degree">B.S. Mechatronics Engineering &amp; Computer Science</p>
-          </div>
-          <div class="edu-meta">
-            <span class="badge badge-blue">2024 – 2027</span>
-            <span class="badge badge-orange">GPA 4.00 / 4.00</span>
-            <span class="badge">3-Year Accelerated</span>
-          </div>
-        </div>
+      <!-- Graduate Coursework -->
+      <div class="credentials-block">
+        <h3 class="credentials-subhead">Graduate-Level Coursework</h3>
+        <p class="credentials-note">Taken as an undergraduate (course number &ge; 6000)</p>
+        <ul class="course-list">
+          <li><span class="course-code">MATH 6300</span> Optimization</li>
+          <li><span class="course-code">ENGR 6010</span> AI in Robotics</li>
+          <li><span class="course-code">ENGR 6020</span> Advanced Control and Applications</li>
+          <li><span class="course-code">ENGR 6030</span> Reinforcement Learning</li>
+        </ul>
+      </div>
 
-        <div class="edu-block">
-          <h4 class="edu-subhead">Graduate-Level Coursework</h4>
-          <p class="edu-note mono">// taking graduate courses while completing accelerated B.S.</p>
-          <ul class="course-list">
-            <li><span class="course-code">MATH 6300</span> Optimization</li>
-            <li><span class="course-code">ENGR 6010</span> AI in Robotics</li>
-            <li><span class="course-code">ENGR 6020</span> Advanced Control and Applications</li>
-            <li><span class="course-code">ENGR 6030</span> Reinforcement Learning</li>
-          </ul>
-        </div>
+      <!-- Undergraduate Coursework -->
+      <div class="credentials-block">
+        <h3 class="credentials-subhead">Undergraduate Coursework (Selected)</h3>
+        <p class="credentials-note">Course number &lt; 5000</p>
+        <ul class="course-list">
+          <li><span class="course-code">CSCI 3350</span> Machine Learning</li>
+          <li><span class="course-code">ENGR 4530</span> Controls &amp; Optimization</li>
+          <li><span class="course-code">ENGR 4580</span> Mechatronic System Design</li>
+          <li><span class="course-code">ENGR 3510</span> Circuits II</li>
+          <li><span class="course-code">ENGR 3520</span> Digital Circuits</li>
+          <li><span class="course-code">ENGR 3540</span> Intro to Feedback Control</li>
+        </ul>
+      </div>
 
-        <div class="edu-block">
-          <h4 class="edu-subhead">Teaching Assistant</h4>
-          <ul class="course-list">
-            <li><span class="course-code">ENGR 3510</span> Circuits II</li>
-            <li><span class="course-code">ENGR 3520</span> Digital Circuits</li>
-            <li><span class="course-code">ENGR 3540</span> Intro to Feedback Control</li>
-          </ul>
-        </div>
+      <!-- Teaching Assistant -->
+      <div class="credentials-block">
+        <h3 class="credentials-subhead">Teaching Assistant</h3>
+        <p class="credentials-note">Write and grade labs, exams, homework, and quizzes. Hold weekly recitation/tutorial sections for Circuits II and Intro to Feedback Control.</p>
+        <ul class="course-list ta-list">
+          <li><span class="course-code">ENGR 3510</span> Circuits II</li>
+          <li><span class="course-code">ENGR 3520</span> Digital Circuits</li>
+          <li><span class="course-code">ENGR 3540</span> Intro to Feedback Control</li>
+        </ul>
+      </div>
 
-        <div class="edu-block">
-          <h4 class="edu-subhead">Leadership &amp; Involvement</h4>
-          <div class="involvement">
-            <span class="pill">Founder · MTSU IEEE Student Branch</span>
-            <span class="pill">President · Robotics Club</span>
-            <span class="pill">Programming Lead · Micromouse Team</span>
-            <span class="pill">Society of Manufacturing Engineers</span>
-            <span class="pill">Quantum Computing Club</span>
-            <span class="pill">Association for Computing Machinery</span>
-          </div>
+      <!-- Leadership -->
+      <div class="credentials-block">
+        <h3 class="credentials-subhead">Leadership &amp; Involvement</h3>
+        <div class="involvement-grid">
+          <span class="involvement-item">IEEE MTSU Student Branch — Founder &amp; President</span>
+          <span class="involvement-item">Robotics Club — President</span>
+          <span class="involvement-item">Micromouse — Programming Lead</span>
+          <span class="involvement-item">Society of Manufacturing Engineers</span>
+          <span class="involvement-item">Quantum Computing Club</span>
+          <span class="involvement-item">Association for Computing Machinery</span>
         </div>
       </div>
     </section>
 
     <!-- AWARDS & RECOGNITION -->
     <section id="awards" class="section">
-      <div class="section-head">
-        <span class="section-num">04</span>
+      <header class="section-header">
+        <span class="section-label">04</span>
         <h2 class="section-title">Awards &amp; Recognition</h2>
         <div class="section-line"></div>
-      </div>
+      </header>
+
       <div class="awards-grid">
-        <article class="award-card glass">
-          <div class="award-icon">★</div>
-          <div class="award-body">
-            <h3>VISE Summer Fellow</h3>
-            <p class="award-org">Vanderbilt Institute for Surgery and Engineering · 2026</p>
-            <p>Selected for the VUSE Summer Research Program — 3D kidney reconstruction and optimal control.</p>
-          </div>
+        <article class="award-card">
+          <h3>VISE Summer Fellow</h3>
+          <p class="award-org">Vanderbilt Institute for Surgery and Engineering — 2026</p>
+          <p>Selected for the VUSE Summer Research Program — 3D kidney reconstruction and optimal control.</p>
         </article>
 
-        <article class="award-card glass">
-          <div class="award-icon">◆</div>
-          <div class="award-body">
-            <h3>AI Scholar</h3>
-            <p class="award-org">VALIANT · Vanderbilt</p>
-            <p>Selected as an AI Scholar for the Vanderbilt Lab for Immersive AI Translation.</p>
-          </div>
+        <article class="award-card">
+          <h3>AI Scholar</h3>
+          <p class="award-org">VALIANT — Vanderbilt</p>
+          <p>Selected as an AI Scholar for the Vanderbilt Lab for Immersive AI Translation.</p>
         </article>
 
-        <article class="award-card glass">
-          <div class="award-icon">◇</div>
-          <div class="award-body">
-            <h3>1st Place — MechTech Course Project Award</h3>
-            <p class="award-org">MTSU · 2026</p>
-            <p>First place at the 2026 MTSU MechTech award for <strong>BalanceCV</strong>.</p>
-          </div>
+        <article class="award-card">
+          <h3>1st Place — MechTech Course Project Award</h3>
+          <p class="award-org">MTSU — 2026</p>
+          <p>First place at the 2026 MTSU MechTech award for BalanceCV.</p>
         </article>
 
-        <article class="award-card glass">
-          <div class="award-icon">⌬</div>
-          <div class="award-body">
-            <h3>IEEE Student Branch — Founder &amp; President</h3>
-            <p class="award-org">MTSU</p>
-            <p>Founded and currently lead the MTSU IEEE student branch.</p>
-          </div>
+        <article class="award-card">
+          <h3>IEEE Student Branch — Founder &amp; President</h3>
+          <p class="award-org">MTSU</p>
+          <p>Founded and currently lead the MTSU IEEE student branch.</p>
         </article>
 
-        <article class="award-card glass">
-          <div class="award-icon">◈</div>
-          <div class="award-body">
-            <h3>Robotics Club President</h3>
-            <p class="award-org">MTSU · SME-affiliated</p>
-            <p>Leading MTSU's Robotics Club; member of the Society of Manufacturing Engineers.</p>
-          </div>
+        <article class="award-card">
+          <h3>Robotics Club President</h3>
+          <p class="award-org">MTSU — SME-affiliated</p>
+          <p>Leading MTSU&apos;s Robotics Club; member of the Society of Manufacturing Engineers.</p>
         </article>
 
-        <article class="award-card glass">
-          <div class="award-icon">⌗</div>
-          <div class="award-body">
-            <h3>Certificate of Achievement</h3>
-            <p class="award-org">Hackathon · Team Neural Nexus 6</p>
-            <p>Recognition from the LIGHTSPEED hackathon for the NeuralNexus6 / Optura submission.</p>
-            <a class="award-link" href="images/Certificate%20of%20Achievement%20-%20Team%20Neural%20Nexus%206.pdf" target="_blank" rel="noopener">→ View certificate (PDF)</a>
-          </div>
+        <article class="award-card">
+          <h3>Certificate of Achievement</h3>
+          <p class="award-org">LIGHTSPEED Hackathon — Team Neural Nexus 6</p>
+          <p>Recognition from the LIGHTSPEED hackathon for the NeuralNexus6 / Optura submission.</p>
+          <a class="award-link" href="images/Certificate%20of%20Achievement%20-%20Team%20Neural%20Nexus%206.pdf" target="_blank" rel="noopener">View certificate (PDF)</a>
         </article>
       </div>
     </section>
 
     <!-- EXPERIENCE TIMELINE -->
     <section id="experience" class="section">
-      <div class="section-head">
-        <span class="section-num">05</span>
+      <header class="section-header">
+        <span class="section-label">05</span>
         <h2 class="section-title">Experience</h2>
         <div class="section-line"></div>
-      </div>
+      </header>
 
       <ol class="timeline">
         <li class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="badge badge-blue">Mar 2026 – Present</span>
+              <span class="timeline-date">Mar 2026 – Present</span>
               <span class="timeline-org">Vanderbilt University</span>
             </div>
             <h3 class="timeline-role">VISE Summer Fellow (VSF)</h3>
-            <p class="timeline-advisor">Advisor · Dr. Jie Ying Wu</p>
-            <p>Accepted to the 2026 Vanderbilt Institute for Surgery and Engineering Summer Fellowship — research focus on <strong>kidney reconstruction from endoscopic videos</strong>.</p>
+            <p class="timeline-advisor">Advisor: Dr. Jie Ying Wu</p>
+            <p>Accepted to the 2026 Vanderbilt Institute for Surgery and Engineering Summer Fellowship — research focus on kidney reconstruction from endoscopic videos.</p>
           </div>
         </li>
 
         <li class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="badge badge-blue">Mar 2026 – Present</span>
-              <span class="timeline-org">VALIANT · Vanderbilt</span>
+              <span class="timeline-date">Mar 2026 – Present</span>
+              <span class="timeline-org">VALIANT — Vanderbilt</span>
             </div>
             <h3 class="timeline-role">AI Scholar</h3>
-            <p>Connecting <span class="chip">skill classification</span> <span class="chip">optimal &amp; robust control</span> <span class="chip">computer vision</span> to bring interdisciplinary mechatronics perspectives into the MAPLE Lab's surgical robotics research.</p>
+            <p>Connecting skill classification, optimal &amp; robust control, and computer vision to bring interdisciplinary mechatronics perspectives into the MAPLE Lab&apos;s surgical robotics research.</p>
           </div>
         </li>
 
         <li class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="badge badge-blue">Sep 2025 – Present</span>
-              <span class="timeline-org">MAPLE Lab · Vanderbilt</span>
+              <span class="timeline-date">Sep 2025 – Present</span>
+              <span class="timeline-org">MAPLE Lab — Vanderbilt</span>
             </div>
             <h3 class="timeline-role">Research Assistant</h3>
-            <p class="timeline-advisor">Advisor · Dr. Jie Ying Wu</p>
-            <p>Built deep-learning models — <span class="chip">LSTM</span> <span class="chip">1D-CNN</span> <span class="chip">TCN</span> — to automate surgeon skill prediction on the da Vinci Research Kit (dVRK). Processed high-dimensional kinematics, contact forces, jerk, and entropy streams in Python; validated and visualized multivariate temporal data in MATLAB.</p>
+            <p class="timeline-advisor">Advisor: Dr. Jie Ying Wu</p>
+            <p>Built deep-learning models — LSTM, 1D-CNN, TCN — to automate surgeon skill prediction on the da Vinci Research Kit (dVRK). Processed high-dimensional kinematics, contact forces, jerk, and entropy streams in Python; validated and visualized multivariate temporal data in MATLAB.</p>
           </div>
         </li>
 
         <li class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="badge">Jan 2025 – Aug 2025</span>
-              <span class="timeline-org">Optics &amp; Mobile Robotics Lab · MTSU</span>
+              <span class="timeline-date">Jan 2025 – Aug 2025</span>
+              <span class="timeline-org">Optics &amp; Mobile Robotics Lab — MTSU</span>
             </div>
             <h3 class="timeline-role">Research Assistant</h3>
-            <p class="timeline-advisor">Advisor · Dr. Hongbo Zhang</p>
-            <p>Designed and built a <strong>six-wheeled moisture-sensing robot</strong> for agricultural irrigation. Established wireless <span class="chip">MQTT</span> and <span class="chip">ESP-NOW</span> networks across ESP32 nodes and a Raspberry Pi gateway. Implemented closed-loop control in Arduino IDE and Python.</p>
+            <p class="timeline-advisor">Advisor: Dr. Hongbo Zhang</p>
+            <p>Designed and built a six-wheeled moisture-sensing robot for agricultural irrigation. Established wireless MQTT and ESP-NOW networks across ESP32 nodes and a Raspberry Pi gateway. Implemented closed-loop control in Arduino IDE and Python.</p>
           </div>
         </li>
 
         <li class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="badge">Oct 2024 – Jul 2025</span>
-              <span class="timeline-org">RoboThink · Middle &amp; East TN</span>
+              <span class="timeline-date">Oct 2024 – Jul 2025</span>
+              <span class="timeline-org">RoboThink — Middle &amp; East TN</span>
             </div>
             <h3 class="timeline-role">Lecturer / Instructor</h3>
             <p>Instructed students ages 8–14 on robotics fundamentals — DC motors, microcontrollers, and intro programming.</p>
@@ -368,310 +388,299 @@
 
     <!-- RESEARCH & MAJOR PROJECTS -->
     <section id="research" class="section">
-      <div class="section-head">
-        <span class="section-num">06</span>
+      <header class="section-header">
+        <span class="section-label">06</span>
         <h2 class="section-title">Research &amp; Major Projects</h2>
         <div class="section-line"></div>
-      </div>
-      <p class="section-sub">Original research, autonomous robotics, and full-stack engineering builds.</p>
+      </header>
+      <p class="section-desc">Original research, autonomous robotics, and full-stack engineering builds.</p>
 
-      <div class="project-grid project-grid-major">
+      <div class="projects-grid">
 
         <!-- LEAP -->
-        <article class="project-card glass">
+        <a href="https://github.com/vu-maple-lab/LEAP_MultiModal_Gesture_Classification" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <img src="images/leap_research.jpeg" alt="LEAP multimodal classification — MAPLE Lab research" loading="lazy" />
           </div>
-          <div class="thumb-strip">
-            <button class="thumb active" data-type="img" data-src="images/leap_research.jpeg" data-alt="LEAP research view 1"><img src="images/leap_research.jpeg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/leap_research2.jpeg" data-alt="LEAP research view 2"><img src="images/leap_research2.jpeg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/leap_research3.jpeg" data-alt="LEAP research view 3"><img src="images/leap_research3.jpeg" alt="" loading="lazy" /></button>
+          <div class="project-gallery">
+            <button class="gallery-thumb active" data-type="img" data-src="images/leap_research.jpeg"><img src="images/leap_research.jpeg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/leap_research2.jpeg"><img src="images/leap_research2.jpeg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/leap_research3.jpeg"><img src="images/leap_research3.jpeg" alt="" loading="lazy" /></button>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Surgical Robotics Research · MAPLE Lab</div>
+            <span class="project-tag">Surgical Robotics Research — MAPLE Lab</span>
             <h3 class="project-title">LEAP — Multimodal Gesture Classification</h3>
-            <p>Multimodal ML pipeline using <strong>I3D models and Late Fusion</strong> to classify surgeon proficiency (<em>Novice / Resident / Expert</em>) from dVRK kinematic and video data.</p>
-            <div class="project-tags">
-              <span class="chip">PyTorch</span><span class="chip">I3D</span><span class="chip">Late Fusion</span><span class="chip">dVRK</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/vu-maple-lab/LEAP_MultiModal_Gesture_Classification" target="_blank" rel="noopener">→ Classification repo</a>
-              <a href="https://github.com/jatoum/LEAP_Data_Processing" target="_blank" rel="noopener">→ Data pipeline</a>
+            <p>Multimodal ML pipeline using I3D models and Late Fusion to classify surgeon proficiency (Novice / Resident / Expert) from dVRK kinematic and video data.</p>
+            <div class="project-chips">
+              <span class="chip">PyTorch</span>
+              <span class="chip">I3D</span>
+              <span class="chip">Late Fusion</span>
+              <span class="chip">dVRK</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- Project Lumen -->
-        <article class="project-card glass">
+        <a href="https://github.com/bereketsillassie/marquee" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <img src="images/AI_pitch_comp.jpg" alt="Project Lumen — Vanderbilt AI Demo and Pitch Competition" loading="lazy" />
           </div>
-          <div class="thumb-strip">
-            <button class="thumb active" data-type="img" data-src="images/AI_pitch_comp.jpg" data-alt="Project Lumen pitch — opening"><img src="images/AI_pitch_comp.jpg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/pitch_comp2.jpg" data-alt="Project Lumen pitch — slide 2"><img src="images/pitch_comp2.jpg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/pitch_comp3.jpg" data-alt="Project Lumen pitch — slide 3"><img src="images/pitch_comp3.jpg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/pitch_comp4.jpg" data-alt="Project Lumen pitch — slide 4"><img src="images/pitch_comp4.jpg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/pitch_comp5.jpg" data-alt="Project Lumen pitch — slide 5"><img src="images/pitch_comp5.jpg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/pitch_comp6.jpg" data-alt="Project Lumen pitch — slide 6"><img src="images/pitch_comp6.jpg" alt="" loading="lazy" /></button>
+          <div class="project-gallery">
+            <button class="gallery-thumb active" data-type="img" data-src="images/AI_pitch_comp.jpg"><img src="images/AI_pitch_comp.jpg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/pitch_comp2.jpg"><img src="images/pitch_comp2.jpg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/pitch_comp3.jpg"><img src="images/pitch_comp3.jpg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/pitch_comp4.jpg"><img src="images/pitch_comp4.jpg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/pitch_comp5.jpg"><img src="images/pitch_comp5.jpg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/pitch_comp6.jpg"><img src="images/pitch_comp6.jpg" alt="" loading="lazy" /></button>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Vanderbilt AI Demo &amp; Pitch Competition</div>
+            <span class="project-tag">Vanderbilt AI Demo &amp; Pitch Competition</span>
             <h3 class="project-title">Project Lumen</h3>
-            <p>A student-led initiative developing a <strong>dynamic pickup shelf for quick-service restaurants</strong> that uses real-time computer vision and projection mapping to display personalized names and brand art directly onto identical cups.</p>
-            <p>Interdisciplinary team — Aidan Martin, Bereket Tegistisillassie, Gabrielle Miller, Hernan Hernandez-Chang, Thang Hua, Liam Rudewicz, Brady Reed — drawing on academic research and industry internships in mechatronics, software, and automation. Industry advisor: <strong>Will Croushorn</strong>, Product Lead for Wendy's FreshAI platform (deployed in 600+ restaurant locations).</p>
-            <div class="project-tags">
-              <span class="chip">Computer Vision</span><span class="chip">Projection Mapping</span><span class="chip">Real-Time</span><span class="chip">QSR</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/bereketsillassie/marquee" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>A student-led initiative developing a dynamic pickup shelf for quick-service restaurants that uses real-time computer vision and projection mapping. Industry advisor: Will Croushorn, Wendy&apos;s FreshAI Product Lead (deployed in 600+ locations).</p>
+            <div class="project-chips">
+              <span class="chip">Computer Vision</span>
+              <span class="chip">Projection Mapping</span>
+              <span class="chip">Real-Time</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- MicroMouse -->
-        <article class="project-card glass">
+        <a href="https://github.com/aidanjmartin/MicroMouse25-26" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <iframe src="https://www.youtube.com/embed/75W8lRs1ifI" title="Micromouse simulator demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Competitive Autonomous Robotics</div>
+            <span class="project-tag">Competitive Autonomous Robotics</span>
             <h3 class="project-title">MicroMouse 25–26</h3>
-            <p>Autonomous maze-solving robot. <strong>Floodfill algorithm</strong> in C/C++ on an Arduino Nano with custom PCB, hardware architecture, and tuned PID control loops.</p>
-            <div class="project-tags">
-              <span class="chip">C/C++</span><span class="chip">Arduino</span><span class="chip">PID</span><span class="chip">PCB Design</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aidanjmartin/MicroMouse25-26" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>Autonomous maze-solving robot. Floodfill algorithm in C/C++ on an Arduino Nano with custom PCB, hardware architecture, and tuned PID control loops.</p>
+            <div class="project-chips">
+              <span class="chip">C/C++</span>
+              <span class="chip">Arduino</span>
+              <span class="chip">PID</span>
+              <span class="chip">PCB Design</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- Pick-n-Place Robot Kinematics -->
-        <article class="project-card glass">
+        <a href="https://github.com/aidanjmartin/picknplace_robot_kinematics" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <img src="images/kinematics.png" alt="Pick-n-place robot kinematics" loading="lazy" />
           </div>
           <div class="project-body">
-            <div class="project-tagline">Robotics · Kinematics</div>
+            <span class="project-tag">Robotics — Kinematics</span>
             <h3 class="project-title">Pick-n-Place Robot Kinematics</h3>
             <p>Forward and inverse kinematics for a pick-and-place robotic arm — full implementation, derivations, and write-up live in the repository.</p>
-            <div class="project-tags">
-              <span class="chip">Kinematics</span><span class="chip">Inverse Kinematics</span><span class="chip">Robotics</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aidanjmartin/picknplace_robot_kinematics" target="_blank" rel="noopener">→ View on GitHub</a>
+            <div class="project-chips">
+              <span class="chip">Kinematics</span>
+              <span class="chip">Inverse Kinematics</span>
+              <span class="chip">Robotics</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- DataSiteAI -->
-        <article class="project-card glass">
+        <a href="https://github.com/bereketsillassie/DataSiteAI" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
-            <iframe src="https://www.youtube.com/embed/xywZi96q9pE" title="DataSiteAI · VandyHacks XII demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xywZi96q9pE" title="DataSiteAI — VandyHacks XII demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="project-body">
-            <div class="project-tagline">VandyHacks XII · Hackathon</div>
+            <span class="project-tag">VandyHacks XII — Hackathon</span>
             <h3 class="project-title">DataSiteAI</h3>
-            <p>Geographic mapping and optimization tool that determines ideal locations for new <strong>data centers</strong>. Combines geospatial data with cost/efficiency optimization.</p>
-            <div class="project-tags">
-              <span class="chip">Geospatial</span><span class="chip">Optimization</span><span class="chip">Web</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/bereketsillassie/DataSiteAI" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>Geographic mapping and optimization tool that determines ideal locations for new data centers. Combines geospatial data with cost/efficiency optimization.</p>
+            <div class="project-chips">
+              <span class="chip">Geospatial</span>
+              <span class="chip">Optimization</span>
+              <span class="chip">Web</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- Fanuc EIP -->
-        <article class="project-card glass">
+        <a href="https://github.com/aidanjmartin/fanuc_eip_translator" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <iframe src="https://www.youtube.com/embed/XORznHtkmeM" title="Fanuc CRX10 path visualization demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Industrial Robotics</div>
+            <span class="project-tag">Industrial Robotics</span>
             <h3 class="project-title">fanuc_eip_translator</h3>
-            <p>Real-time <strong>3D path visualization and kinematic analysis</strong> for a Fanuc CRX10 collaborative robot — parses URDF joint states over Ethernet/IP.</p>
-            <div class="project-tags">
-              <span class="chip">URDF</span><span class="chip">Ethernet/IP</span><span class="chip">Kinematics</span><span class="chip">3D Viz</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aidanjmartin/fanuc_eip_translator" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>Real-time 3D path visualization and kinematic analysis for a Fanuc CRX10 collaborative robot — parses URDF joint states over Ethernet/IP.</p>
+            <div class="project-chips">
+              <span class="chip">URDF</span>
+              <span class="chip">Ethernet/IP</span>
+              <span class="chip">Kinematics</span>
+              <span class="chip">3D Viz</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- CV Sorting -->
-        <article class="project-card glass">
+        <a href="https://github.com/aidanjmartin/Automated-Computer-Vision-Sorting-System" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <iframe src="https://www.youtube.com/embed/fL_YJjmcBfM" title="Automated CV Sorting System demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Computer Vision · Mechatronics</div>
+            <span class="project-tag">Computer Vision — Mechatronics</span>
             <h3 class="project-title">Automated CV Sorting System</h3>
-            <p>Computer-vision based <strong>object detection</strong> driving an automated sorting mechanism — vision pipeline integrated with physical actuation.</p>
-            <div class="project-tags">
-              <span class="chip">OpenCV</span><span class="chip">Mechatronics</span><span class="chip">Actuation</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aidanjmartin/Automated-Computer-Vision-Sorting-System" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>Computer-vision based object detection driving an automated sorting mechanism — vision pipeline integrated with physical actuation.</p>
+            <div class="project-chips">
+              <span class="chip">OpenCV</span>
+              <span class="chip">Mechatronics</span>
+              <span class="chip">Actuation</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- BalanceCV -->
-        <article class="project-card glass">
+        <a href="https://github.com/aidanjmartin/BalanceCV" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <iframe src="https://www.youtube.com/embed/_kxQwls69hA" title="BalanceCV demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <div class="thumb-strip">
-            <button class="thumb thumb-video active" data-type="video" data-src="https://www.youtube.com/embed/_kxQwls69hA" data-alt="BalanceCV demo">▶ Demo</button>
-            <button class="thumb" data-type="img" data-src="images/balanceCV_mechtech.JPG" data-alt="MechTech feature 1"><img src="images/balanceCV_mechtech.JPG" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/balanceCV_mechtech2.JPG" data-alt="MechTech feature 2"><img src="images/balanceCV_mechtech2.JPG" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/balanceCV_mechtech3.JPG" data-alt="MechTech feature 3"><img src="images/balanceCV_mechtech3.JPG" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/balanceCV_mechtech4.JPG" data-alt="MechTech feature 4"><img src="images/balanceCV_mechtech4.JPG" alt="" loading="lazy" /></button>
+          <div class="project-gallery">
+            <button class="gallery-thumb gallery-thumb-video active" data-type="video" data-src="https://www.youtube.com/embed/_kxQwls69hA">Demo</button>
+            <button class="gallery-thumb" data-type="img" data-src="images/balanceCV_mechtech.JPG"><img src="images/balanceCV_mechtech.JPG" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/balanceCV_mechtech2.JPG"><img src="images/balanceCV_mechtech2.JPG" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/balanceCV_mechtech3.JPG"><img src="images/balanceCV_mechtech3.JPG" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/balanceCV_mechtech4.JPG"><img src="images/balanceCV_mechtech4.JPG" alt="" loading="lazy" /></button>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Computer Vision</div>
+            <span class="project-tag">Computer Vision — 1st Place MechTech 2026</span>
             <h3 class="project-title">BalanceCV</h3>
-            <p>Computer vision application focused on <strong>balance and kinematic tracking</strong>. Skeletal pose estimation applied to stability analysis.</p>
-            <div class="project-tags">
-              <span class="chip">Pose Estimation</span><span class="chip">Python</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aidanjmartin/BalanceCV" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>Computer vision application focused on balance and kinematic tracking. Skeletal pose estimation applied to stability analysis.</p>
+            <div class="project-chips">
+              <span class="chip">Pose Estimation</span>
+              <span class="chip">Python</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- Jarvis -->
-        <article class="project-card glass">
+        <a href="https://github.com/aidanjmartin/ENGR3530_Electronics_JarvisProject" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <img src="images/jarvis_box.jpg" alt="ENGR 3530 Jarvis project — assembled enclosure" loading="lazy" />
           </div>
-          <div class="thumb-strip">
-            <button class="thumb active" data-type="img" data-src="images/jarvis_box.jpg" data-alt="Jarvis enclosure"><img src="images/jarvis_box.jpg" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/jarvis_box_cad.png" data-alt="Jarvis CAD model"><img src="images/jarvis_box_cad.png" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/tda_2030.png" data-alt="TDA2030 audio amplifier"><img src="images/tda_2030.png" alt="" loading="lazy" /></button>
-            <button class="thumb" data-type="img" data-src="images/lm386.png" data-alt="LM386 audio amplifier"><img src="images/lm386.png" alt="" loading="lazy" /></button>
+          <div class="project-gallery">
+            <button class="gallery-thumb active" data-type="img" data-src="images/jarvis_box.jpg"><img src="images/jarvis_box.jpg" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/jarvis_box_cad.png"><img src="images/jarvis_box_cad.png" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/tda_2030.png"><img src="images/tda_2030.png" alt="" loading="lazy" /></button>
+            <button class="gallery-thumb" data-type="img" data-src="images/lm386.png"><img src="images/lm386.png" alt="" loading="lazy" /></button>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Coursework · Electronics</div>
+            <span class="project-tag">Coursework — Electronics</span>
             <h3 class="project-title">ENGR 3530 — Jarvis Project</h3>
-            <p>Academic <strong>analog electronics</strong> build — audio amplifier circuit using the <span class="mono">TDA2030</span> and <span class="mono">LM386</span> ICs, packaged into a custom CAD-modeled enclosure.</p>
-            <div class="project-tags">
-              <span class="chip">Analog</span><span class="chip">Audio Amp</span><span class="chip">CAD</span><span class="chip">PCB</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aidanjmartin/ENGR3530_Electronics_JarvisProject" target="_blank" rel="noopener">→ View on GitHub</a>
+            <p>Academic analog electronics build — audio amplifier circuit using the TDA2030 and LM386 ICs, packaged into a custom CAD-modeled enclosure.</p>
+            <div class="project-chips">
+              <span class="chip">Analog</span>
+              <span class="chip">Audio Amp</span>
+              <span class="chip">CAD</span>
+              <span class="chip">PCB</span>
             </div>
           </div>
-        </article>
+        </a>
 
         <!-- Moisture-Sensing Robot -->
-        <article class="project-card glass">
+        <a href="https://youtu.be/anY-flwiC_s" target="_blank" rel="noopener" class="project-card">
           <div class="project-media">
             <iframe src="https://www.youtube.com/embed/anY-flwiC_s" title="Autonomous moisture-sensing robot — system overview" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="project-body">
-            <div class="project-tagline">Field Robotics Research · MTSU</div>
+            <span class="project-tag">Field Robotics Research — MTSU</span>
             <h3 class="project-title">Autonomous Moisture-Sensing Robot</h3>
-            <p>Six-wheeled <strong>agricultural irrigation robot</strong> built at the MTSU Optics &amp; Mobile Robotics Lab. Wireless ESP32 ↔ Raspberry Pi mesh over <strong>MQTT and ESP-NOW</strong> with closed-loop drive control.</p>
-            <div class="project-tags">
-              <span class="chip">ESP32</span><span class="chip">Raspberry Pi</span><span class="chip">MQTT</span><span class="chip">ESP-NOW</span><span class="chip">Arduino</span>
-            </div>
-            <div class="project-links">
-              <a href="https://youtu.be/anY-flwiC_s" target="_blank" rel="noopener">→ System overview</a>
-              <a href="https://youtu.be/Ws8GFcEzviA" target="_blank" rel="noopener">→ Driving demo</a>
+            <p>Six-wheeled agricultural irrigation robot built at the MTSU Optics &amp; Mobile Robotics Lab. Wireless ESP32 / Raspberry Pi mesh over MQTT and ESP-NOW with closed-loop drive control.</p>
+            <div class="project-chips">
+              <span class="chip">ESP32</span>
+              <span class="chip">Raspberry Pi</span>
+              <span class="chip">MQTT</span>
+              <span class="chip">ESP-NOW</span>
             </div>
           </div>
-        </article>
+        </a>
 
       </div>
     </section>
 
-    <!-- HACKATHONS & SCHOOL PROJECTS -->
+    <!-- HACKATHONS & SOFTWARE BUILDS -->
     <section id="projects" class="section">
-      <div class="section-head">
-        <span class="section-num">07</span>
+      <header class="section-header">
+        <span class="section-label">07</span>
         <h2 class="section-title">Hackathons &amp; Software Builds</h2>
         <div class="section-line"></div>
-      </div>
-      <p class="section-sub">Rapid prototyping, hackathon submissions, and supporting software projects. <span class="mono muted">// edit copy freely</span></p>
+      </header>
+      <p class="section-desc">Rapid prototyping, hackathon submissions, and supporting software projects.</p>
 
-      <div class="project-grid project-grid-mini">
+      <div class="mini-grid">
 
-        <article class="mini-card glass">
+        <a href="https://github.com/gem5b/NeuralNexus6" target="_blank" rel="noopener" class="mini-card">
           <div class="mini-media">
             <iframe src="https://www.youtube.com/embed/3RIiRee3o-c" title="Optura / NeuralNexus6 — LIGHTSPEED demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <div class="mini-tag">LIGHTSPEED Hackathon</div>
+          <span class="mini-tag">LIGHTSPEED Hackathon</span>
           <h3>NeuralNexus6 / Optura</h3>
-          <p>Synthetic healthcare data generator and AI chatbot for <strong>HIPAA-compliant datasets</strong> using tensor decomposition.</p>
-          <div class="mini-links">
-            <a href="https://github.com/gem5b/NeuralNexus6" target="_blank" rel="noopener">→ GitHub</a>
-            <a href="images/Certificate%20of%20Achievement%20-%20Team%20Neural%20Nexus%206.pdf" target="_blank" rel="noopener">→ Certificate</a>
-          </div>
-        </article>
+          <p>Synthetic healthcare data generator and AI chatbot for HIPAA-compliant datasets using tensor decomposition.</p>
+        </a>
 
-        <article class="mini-card glass">
-          <div class="mini-tag">Industrial Automation</div>
+        <a href="https://github.com/aidanjmartin/Festo_Handling_Station" target="_blank" rel="noopener" class="mini-card">
+          <span class="mini-tag">Industrial Automation</span>
           <h3>Festo Handling Station</h3>
-          <p>Mechatronics &amp; automation programming for industrial <strong>Festo handling stations</strong> — sensor sequencing and PLC-style control.</p>
-          <a href="https://github.com/aidanjmartin/Festo_Handling_Station" target="_blank" rel="noopener">→ GitHub</a>
-        </article>
+          <p>Mechatronics &amp; automation programming for industrial Festo handling stations — sensor sequencing and PLC-style control.</p>
+        </a>
 
-        <article class="mini-card glass">
-          <div class="mini-tag">AI Application</div>
+        <a href="https://github.com/bereketsillassie/DocuAi" target="_blank" rel="noopener" class="mini-card">
+          <span class="mini-tag">AI Application</span>
           <h3>DocuAi</h3>
-          <p>AI-powered <strong>document processing and analysis</strong> application — extraction and summarization over uploaded documents.</p>
-          <a href="https://github.com/bereketsillassie/DocuAi" target="_blank" rel="noopener">→ GitHub</a>
-        </article>
+          <p>AI-powered document processing and analysis application — extraction and summarization over uploaded documents.</p>
+        </a>
 
-        <article class="mini-card glass">
+        <a href="https://github.com/bradyk25/Hackathon2025" target="_blank" rel="noopener" class="mini-card">
           <div class="mini-media">
-            <img src="images/hackmt1.jpeg" alt="HackMT team photo" loading="lazy" onerror="this.replaceWith(window.placeholderMedia('Hackathon 2025'))" />
+            <img src="images/hackmt1.jpeg" alt="HackMT team photo" loading="lazy" />
           </div>
-          <div class="mini-tag">Hackathon</div>
+          <span class="mini-tag">Hackathon</span>
           <h3>Hackathon 2025</h3>
           <p>Collaborative hackathon software project — full-stack build with teammates.</p>
-          <a href="https://github.com/bradyk25/Hackathon2025" target="_blank" rel="noopener">→ GitHub</a>
-        </article>
+        </a>
 
-        <article class="mini-card glass">
+        <a href="https://github.com/aidanjmartin/cattype" target="_blank" rel="noopener" class="mini-card">
           <div class="mini-media">
             <iframe src="https://www.youtube.com/embed/JuPiovR7oEo" title="cattype demo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <div class="mini-tag">Side Project</div>
+          <span class="mini-tag">Side Project</span>
           <h3>cattype</h3>
           <p>Typing test / keyboard input application — input timing analysis and live feedback.</p>
-          <a href="https://github.com/aidanjmartin/cattype" target="_blank" rel="noopener">→ GitHub</a>
-        </article>
+        </a>
 
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section section-contact">
-      <div class="contact-card glass">
-        <span class="section-num">08</span>
-        <h2 class="contact-title">Let's build something.</h2>
+      <header class="section-header">
+        <span class="section-label">08</span>
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
+      </header>
+
+      <div class="contact-card">
+        <h3 class="contact-heading">Let&apos;s build something.</h3>
         <p>Open to research collaboration, robotics consulting, and engineering opportunities.</p>
         <div class="contact-links">
           <a class="btn btn-primary" href="https://github.com/aidanjmartin" target="_blank" rel="noopener">GitHub</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/aidanjmartin/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn btn-ghost" href="https://www.youtube.com/@ajmartin_robot" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn btn-secondary" href="https://www.youtube.com/@ajmartin_robot" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn btn-secondary" href="images/aidan-martin-resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p class="mono muted">// designed &amp; built by Aidan J Martin · 2026</p>
+    <p>Designed &amp; built by Aidan J Martin — 2026</p>
   </footer>
 
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox" hidden>
-    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
     <img class="lightbox-img" src="" alt="" />
   </div>
 
